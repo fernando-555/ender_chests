@@ -1,1 +1,310 @@
 Copyright 2014 fernando-555
+-- Ender chests --
+-- red:
+minetest.register_node("ender_chests:red", {
+	description = "Ender Chests (Chanel Red)",
+  tiles = {
+		"ender_red_top.png",
+		"ender_bottom.png",
+		"ender_side.png",
+		"ender_side.png",
+		"ender_rear.png",
+		"ender_red_front.png"
+	},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,9]"..
+				"list[current_player;ender_chests:red;0,0;8,4;]"..
+				"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "Ender Chest (Chanel Red)")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in red chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to red chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from red chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+-- green:
+minetest.register_node("ender_chests:green", {
+	description = "Ender Chests (Chanel green)",
+  tiles = {
+		"ender_green_top.png",
+		"ender_bottom.png",
+		"ender_side.png",
+		"ender_side.png",
+		"ender_rear.png",
+		"ender_green_front.png"
+	},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,9]"..
+				"list[current_player;ender_chests:green;0,0;8,4;]"..
+				"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "Ender Chest (Chanel green)")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in green chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to green chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from green chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+-- yellow:
+minetest.register_node("ender_chests:yellow", {
+	description = "Ender Chests (Chanel Yellow)",
+  tiles = {
+		"ender_yellow_top.png",
+		"ender_bottom.png",
+		"ender_side.png",
+		"ender_side.png",
+		"ender_rear.png",
+		"ender_yellow_front.png"
+	},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,9]"..
+				"list[current_player;ender_chests:yellow;0,0;8,4;]"..
+				"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "Ender Chest (Chanel yellow)")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in yellow chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to yellow chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from yellow chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+-- blue:
+minetest.register_node("ender_chests:blue", {
+	description = "Ender Chests (Chanel blue)",
+  tiles = {
+		"ender_blue_top.png",
+		"ender_bottom.png",
+		"ender_side.png",
+		"ender_side.png",
+		"ender_rear.png",
+		"ender_blue_front.png"
+	},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,9]"..
+				"list[current_player;ender_chests:blue;0,0;8,4;]"..
+				"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "Ender Chest (Chanel Blue)")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in blue chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to blue chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from blue chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+-- mese:
+minetest.register_node("ender_chests:mese", {
+	description = "Ender Chests (Chanel Mese)",
+  tiles = {
+	     "ender_mese_top.png",
+		"ender_bottom.png",
+		"ender_mese_side.png",
+		"ender_mese_side.png",
+		"ender_mese_rear.png",
+		"ender_mese_front.png"
+	},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+	sounds = default.node_sound_wood_defaults(),
+     	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[21,12]"..
+				"list[current_player;ender_chests:mese;0,0;21,8;]"..
+				"list[current_player;main;6,8;8,4;]")
+		meta:set_string("infotext", "Ender Chest (Chanel Mese)")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in mese chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to mese chest at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from mese chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+-- register all craftems
+
+minetest.register_craftitem("ender_chests:sample_rune", {
+	description = "Teleport Rune",
+	inventory_image = "sample.png",
+})
+
+minetest.register_craftitem("ender_chests:chests_rune", {
+	description = "Compressed Chests Rune",
+	inventory_image = "chests.png",
+})
+
+minetest.register_craftitem("ender_chests:ofensive_rune", {
+	description = "Ofensive Chests Rune",
+	inventory_image = "ofensive.png",
+})
+
+-- craft all runes
+
+minetest.register_craft({
+	output = 'ender_chests:chests_rune',
+	recipe = {
+		{'default:chest','glooptest:talinite_ingot','default:chest'},
+		{'glooptest:talinite_ingot','default:mese_crystal','glooptest:talinite_ingot'},
+    {'default:chest','glooptest:talinite_ingot','default:chest'}
+	}
+})
+
+minetest.register_craft({
+	output = 'ender_chests:ofensive_rune',
+	recipe = {
+  {'default:obsidian_glass','default:obsidian_glass','default:obsidian_glass'},
+		{'default:obsidian_glass','ender_chests:chests_rune','default:obsidian_glass'},
+		{'default:obsidian_glass','default:obsidian_glass','default:obsidian_glass'}
+	}
+})
+
+minetest.register_craft({
+	output = 'ender_chests:sample_rune',
+	recipe = {
+		{'default:ice','glooptest:akalin_ingot','default:ice'},
+		{'glooptest:akalin_ingot','default:chest','glooptest:akalin_ingot'},
+		{'default:ice','glooptest:akalin_ingot','default:ice'}
+	}
+})
+
+-- craft all chests
+
+minetest.register_craft({
+	output = 'ender_chests:red 2',
+	recipe = {
+  {'default:gold_ingot','wool:red','default:gold_ingot'},
+    {'default:obsidian','ender_chests:sample_rune','default:obsidian'},
+    {'default:wood','default:mese_crystal','default:wood'}
+	}
+})
+
+minetest.register_craft({
+	output = 'ender_chests:blue 2',
+	recipe = {
+  {'default:gold_ingot','wool:blue','default:gold_ingot'},
+    {'default:obsidian','ender_chests:sample_rune','default:obsidian'},
+    {'default:wood','default:mese_crystal','default:wood'}
+	}
+})
+
+minetest.register_craft({
+	output = 'ender_chests:yellow 2',
+	recipe = {
+  {'default:gold_ingot','wool:yellow','default:gold_ingot'},
+    {'default:obsidian','ender_chests:sample_rune','default:obsidian'},
+    {'default:wood','default:mese_crystal','default:wood'}
+	}
+})
+
+minetest.register_craft({
+	output = 'ender_chests:green 2',
+	recipe = {
+  {'default:gold_ingot','wool:green','default:gold_ingot'},
+    {'default:obsidian','ender_chests:sample_rune','default:obsidian'},
+    {'default:wood','default:mese_crystal','default:wood'}
+	}
+})
+
+-- craft the mese chest
+
+minetest.register_craft({
+	output = 'ender_chests:mese 2',
+	recipe = {
+  {'default:goldblock','default:mese','default:goldblock'},
+    {'default:obsidian','ender_chests:ofensive_rune','default:obsidian'},
+    {'default:obsidian_glass','default:diamond','default:obsidian_glass'}
+	}
+})
+
+-- load all inv's
+
+minetest.register_on_joinplayer(function(player)
+	local inv = player:get_inventory()
+	inv:set_size("ender_chests:blue", 8*4)
+end)
+
+minetest.register_on_joinplayer(function(player)
+	local inv = player:get_inventory()
+	inv:set_size("ender_chests:yellow", 8*4)
+end)
+
+minetest.register_on_joinplayer(function(player)
+	local inv = player:get_inventory()
+	inv:set_size("ender_chests:green", 8*4)
+end)
+
+minetest.register_on_joinplayer(function(player)
+	local inv = player:get_inventory()
+	inv:set_size("ender_chests:red", 8*4)
+end)
+
+minetest.register_on_joinplayer(function(player)
+	local inv = player:get_inventory()
+	inv:set_size("ender_chests:mese", 21*8)
+end)
+
+
